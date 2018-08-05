@@ -6,7 +6,6 @@ WORKDIR /tmp/install-tl-unx
 
 COPY texlive.profile .
 
-# Install TeX Live 2016 with some basic collections
 RUN apk --no-cache add perl wget xz tar && \
 	wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz && \
 	tar --strip-components=1 -xvf install-tl-unx.tar.gz && \
