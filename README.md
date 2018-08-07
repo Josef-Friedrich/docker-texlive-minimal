@@ -9,3 +9,11 @@ the latest texlive distribution and is installed portable.
 
 * https://github.com/dc-uba/docker-alpine-texlive
 * https://github.com/Paperist/docker-alpine-texlive-ja
+
+# Build the image
+
+    sudo docker build .
+
+# Install a package
+
+    docker run -ti texlive tlmgr
