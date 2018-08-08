@@ -16,7 +16,7 @@ the latest texlive distribution and is installed portable.
 
 # Keep container alive
 
-    sudo docker run --name texlive --detach texlive tail -f /dev/null
+    sudo docker run --name texlive --volume $(pwd)/build:/build --detach texlive tail -f /dev/null
 
 # List all installed packages
 
