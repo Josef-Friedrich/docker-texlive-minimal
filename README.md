@@ -12,8 +12,16 @@ the latest texlive distribution and is installed portable.
 
 # Build the image
 
-    sudo docker build .
+    sudo docker build --tag texlive .
+
+# Keep container alive
+
+    sudo docker run --name texlive --detach texlive tail -f /dev/null
+
+# List all installed packages
+
+    sudo docker exec texlive tlmgr info --only-installed
 
 # Install a package
 
-    docker run -ti texlive tlmgr
+    sudo docker run -ti texlive tlmgr
